@@ -4,6 +4,7 @@
 # Instale o streamlit: pip install streamlit
 
 # Imports
+from pathlib import Path
 import joblib
 import streamlit as st
 import pandas as pd
@@ -11,8 +12,12 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Carregar o modelo e o scaler
-modelo = joblib.load("modelos/dsa_modelo_v1.pkl")
-scaler = joblib.load("modelos/dsa_padronizador.pkl")
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR.parent / "modelos" / "dsa_modelo_v1.pkl"
+MODEL_PATH2 = BASE_DIR.parent / "modelos" / "dsa_padronizador.pkl"
+
+modelo = joblib.load(MODEL_PATH)
+scaler = joblib.load(MODEL_PATH2)
 
 # Função para pré-processar os dados de entrada
 # As colunas devem ser exatamente as mesmas usadas durante o treinamento
