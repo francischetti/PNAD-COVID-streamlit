@@ -23,9 +23,9 @@ mv antigonome algumacoisa.zip
 unzip algumacoisa.zip
 
 # Execute os comandos abaixo:
-cd Projeto1_PNAD-COVID
-conda create -n projeto1 python=3.11
-conda activate projeto1
+cd PNAD-COVID-streamlit
+conda create -n pnad-covid python=3.11
+conda activate pnad-covid
 pip install -r requirements.txt 
 
 cd deploy
