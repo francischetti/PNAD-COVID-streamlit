@@ -11,8 +11,8 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Carregar o modelo e o scaler
-modelo = joblib.load("../modelos/dsa_modelo_v1.pkl")
-scaler = joblib.load("../modelos/dsa_padronizador.pkl")
+modelo = joblib.load("modelos/dsa_modelo_v1.pkl")
+scaler = joblib.load("modelos/dsa_padronizador.pkl")
 
 # Função para pré-processar os dados de entrada
 # As colunas devem ser exatamente as mesmas usadas durante o treinamento
