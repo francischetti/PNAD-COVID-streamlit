@@ -487,9 +487,11 @@ def preprocess_input(salario,
 st.set_page_config(page_title="Projeto 1 - PNAD-COVID", page_icon="📊", layout="wide", initial_sidebar_state= "expanded")
 
 # Exibe o logo no canto superior esquerdo e na sidebar
-st.logo("../logo/logo.png")
-st.image("../logo/logo.png")
+BASE_DIR = Path(__file__).resolve().parent
+LOGO_PATH = BASE_DIR.parent / "logo" / "logo.png"
 
+st.logo(str(LOGO_PATH))
+st.image(str(LOGO_PATH)
 
 # Título centralizado
 st.title("Data Science Academy - Pós-Graduação em Engenharia de Machine Learning")
