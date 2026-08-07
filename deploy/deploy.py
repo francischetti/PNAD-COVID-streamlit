@@ -491,7 +491,7 @@ BASE_DIR = Path(__file__).resolve().parent
 LOGO_PATH = BASE_DIR.parent / "logo" / "logo.png"
 
 st.logo(str(LOGO_PATH))
-st.image(str(LOGO_PATH)
+st.image(str(LOGO_PATH))
 
 # Título centralizado
 st.title("Data Science Academy - Pós-Graduação em Engenharia de Machine Learning")
