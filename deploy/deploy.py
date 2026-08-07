@@ -1009,37 +1009,18 @@ if st.button('Prever'):
                                   c014_2,
                                   c014_99)
 
-    # Faz a previsão com o modelo
+try:
     prediction = modelo.predict(input_data)
     prediction_proba = modelo.predict_proba(input_data)[0]
 
-    #st.write('Previsão:' , 'Sim' if prediction[0] == 1 else 'Não')
-    st.write("")
     if prediction[0] == 1:
-        st.success("**Sim, esta pessoa provavelmente recebeu o Auxílio Emergencial durante a pandemia do COVID 19**")
+        st.success("**Sim, esta pessoa provavelmente recebeu o Auxílio Emergencial durante a pandemia do COVID-19**")
     else:
         st.warning("**Não, provavelmente esta pessoa não recebeu o Auxílio Emergencial**")
 
-    st.markdown("---")
-    st.subheader("Probabilidades por classe:")
-    st.write(f"- **Probabilidade de ter recebido:** {prediction_proba[0]*100:.2f}%")
-    st.write(f"- **Probabilidade de não ter recebido:** {prediction_proba[1]*100:.2f}%")
-
-    st.write("")
-    st.write("")
-    st.write("")
-    st.write('Obrigado por testar!')
-    st.caption('By Christopherson B. Francischetti')
-    st.markdown(
-    """
-    <div style="text-align: center; color: gray;">
-        <hr>
-        <p>Atenção: Este modelo está em fase beta! Modelo de Machine Learning criado com base nos microdados do IBGE disponibilizados na PNAD-COVID19.</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-    )
-
-# FIM
-
+except Exception as e:
+    st.exception(e)
+    st.write("Shape:", input_data.shape)
+    st.write(input_data)
+    st.write(input_data.dtypes)
 
