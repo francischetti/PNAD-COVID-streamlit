@@ -14,10 +14,10 @@ from sklearn.preprocessing import StandardScaler
 # Carregar o modelo e o scaler
 BASE_DIR = Path(__file__).resolve().parent
 MODEL_PATH = BASE_DIR.parent / "modelos" / "dsa_modelo_v1.pkl"
-MODEL_PATH2 = BASE_DIR.parent / "modelos" / "dsa_padronizador.pkl"
+MODEL_PATHH = BASE_DIR.parent / "modelos" / "dsa_padronizador.pkl"
 
 modelo = joblib.load(MODEL_PATH)
-scaler = joblib.load(MODEL_PATH2)
+scaler = joblib.load(MODEL_PATHH)
 
 # Função para pré-processar os dados de entrada
 # As colunas devem ser exatamente as mesmas usadas durante o treinamento
