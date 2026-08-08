@@ -1,4 +1,4 @@
-# Projeto1_PNAD-COVID
+# PNAD-COVID-streamlit
 ##### Modelo de Machine Learning para prever se uma determinada pessoa, dadas as suas características, recebeu, ou não, o Auxílio Emergencial do Governo Federal (BR) durante a pandemia do novo coronavírus (COVID-19), com base nos microdados disponibilizados pelo IBGE.
 
 
@@ -6,7 +6,7 @@
 
 
 
-Projeto1_PNAD-COVID/
+PNAD-COVID-streamlit/
 
 ├── dados/
 
