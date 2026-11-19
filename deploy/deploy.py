@@ -13,7 +13,7 @@ from sklearn.preprocessing import StandardScaler
 
 # Carregar o modelo e o scaler
 BASE_DIR = Path(__file__).resolve().parent
-MODEL_PATH = BASE_DIR.parent / "modelos" / "dsa_modelo_DT.pkl"
+MODEL_PATH = BASE_DIR.parent / "modelos" / "dsa_modelo_final.pkl.gz"
 MODEL_PATHH = BASE_DIR.parent / "modelos" / "dsa_padronizador.pkl"
 
 modelo = joblib.load(MODEL_PATH)
